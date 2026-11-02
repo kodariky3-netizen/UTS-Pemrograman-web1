@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Buku Online</title> 
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card" style="max-width: 420px; margin: 80px auto;">
+            <h2 style="text-align: center;">Toko Buku Online</h2>
+            <p style="text-align: center; margin-bottom: 20px;">
+                Selamat Datang di Toko Buku Online
+            </p>
+
+            <form id="loginForm">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Masukkan email" required>
+
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" required>
+
+                <button type="submit" style="width: 100%;">
+                    Login
+                </button>
+            </form>wawa
+
+            <p style="text-align: center; margin-top: 20px;">
+                <a href="#" onclick="bukaModal('lupaModal')">Lupa Password?</a>
+            </p>
+
+            <p style="text-align: center; margin-top: 15px;">
+                Belum punya akun?
+                <a href="#" onclick="bukaModal('daftarModal')">Daftar</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal Lupa Password -->
+    <div class="modal" id="lupaModal">
+        <div class="modal-content">
+            <h2>Lupa Password</h2>
+            <p>Masukkan email untuk pemulihan password.</p>
+            <input type="email" placeholder="Masukkan email">
+            <button onclick="alert('Permintaan pemulihan berhasil dikirim!')">
+                Kirim
+            </button>
+            <button onclick="tutupModal('lupaModal')">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Modal Daftar -->
+    <div class="modal" id="daftarModal">
+        <div class="modal-content">
+            <h2>Daftar Akun</h2>
+            <input type="text" placeholder="Nama lengkap">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button onclick="alert('Pendaftaran berhasil!')">
+                Daftar
+            </button>
+            <button onclick="tutupModal('daftarModal')">Tutup</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+

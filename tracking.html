@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Toko Buku Online</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Tracking Pengiriman</h2>
+            <p>Masukkan nomor Delivery Order untuk melihat status pengiriman.</p>
+
+            <form id="formTracking">
+                <label>Nomor Delivery Order</label>
+                <input type="text" id="nomorDO"
+                    placeholder="Contoh: DO112" required>
+
+                <button type="submit">Cari</button>
+            </form>
+        </section>
+
+        <section class="card" id="hasilTracking" style="display: none;">
+            <h2>Informasi Pengiriman</h2>
+
+            <p><strong>Nama Pemesan:</strong> <span id="namaTrack"></span></p>
+            <p><strong>Status:</strong> <span id="statusTrack"></span></p>
+            <p><strong>Ekspedisi:</strong> <span id="ekspedisiTrack"></span></p>
+            <p><strong>Tanggal Kirim:</strong> <span id="tanggalTrack"></span></p>
+            <p><strong>Jenis Paket:</strong> <span id="paketTrack"></span></p>
+            <p><strong>Total Pembayaran:</strong> <span id="totalTrack"></span></p>
+
+            <br>
+
+            <label>Progress Pengiriman</label>
+            <progress id="progressTrack" value="0" max="100"
+                style="width: 100%; height: 25px;"></progress>
+
+            <p id="persenTrack"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Toko Buku Online. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

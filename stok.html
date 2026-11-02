@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Toko Buku Online</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="stok.html">Katalog Buku</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Katalog Buku</h2>
+            <p>Daftar stok buku yang tersedia di toko kami.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Judul Buku</th>
+                        <th>Penulis</th>
+                        <th>Kategori</th>
+                        <th>Harga</th>
+                        <th>Stok</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelBuku">
+                </tbody>
+            </table>
+        </section>
+
+        <section class="card">
+            <h2>Tambah Stok Buku</h2>
+
+            <form id="formBuku">
+                <label>Judul Buku</label>
+                <input type="text" id="judul" required>
+
+                <label>Nama Penulis</label>
+                <input type="text" id="penulis" required>
+
+                <label>Kategori</label>
+                <input type="text" id="kategori" required>
+
+                <label>Harga</label>
+                <input type="number" id="harga" min="1" required>
+
+                <label>Jumlah Stok</label>
+                <input type="number" id="stok" min="0" required>
+
+                <button type="submit">Tambah Buku</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy;  2026 Toko Buku Online. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
